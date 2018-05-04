@@ -1,0 +1,29 @@
+h2 {
+  color: pink; }
+
+.style {
+  width: 500px; }
+  @media screen and (orientation: landscape) {
+    .style {
+      width: 200px;
+      margin-left: 80px; } }
+
+/*.message {  
+  border: 1px solid #ccc;  
+  padding: 10px;  
+  color: #333;  
+}  
+.success {  
+  @extend .message;  
+  border-color: green;  
+}  
+.error {  
+  @extend .message;  
+  border-color: red;  
+}  
+.warning {  
+  @extend .message;  
+  border-color: yellow;  
+} */
+
+/*# sourceMappingURL=rule-media.css.map */

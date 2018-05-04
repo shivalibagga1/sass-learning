@@ -1,0 +1,44 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333; }
+
+.container {
+  width: 100%; }
+
+aside {
+  float: right;
+  width: 31.25%; }
+
+article {
+  float: left;
+  width: 62.5%; }
+
+h3 {
+  font-size: 17px;
+  width: 250px; }
+
+h3:after {
+  content: "My font is: sans-serif"; }
+
+h3 {
+  color: red;
+  color: lightblue; }
+
+h3 {
+  padding: 25px; }
+
+.btn {
+  background-color: bLack; }
+
+h2:after {
+  content: " My favourite language is Sass";
+  font-family: Arial sans-serif; }
+
+/*# sourceMappingURL=proj1.css.map */

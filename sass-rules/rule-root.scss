@@ -1,0 +1,43 @@
+h2{  
+color: blue;  
+background-color: pink;  
+@at-root {  
+.style{  
+ font-size: 20px;  
+ font-style: bold;  
+ color: violet;  
+ }  
+ }  
+}
+
+
+$font-sizes: 10px + 20px;  
+$style: (  
+  color: #bdc3c7  
+);  
+.container{  
+  @debug $style;  
+  @debug $font-sizes;  
+} 
+
+
+
+$main-color:  #bdc3c7;  
+@warn "Darker: " darken($main-color, 30%);
+
+$colors: (  
+  blue: #c0392b,  
+  black: #2980b9,  
+);  
+
+
+
+@function style-variation($style) {  
+  @if map-has-key($colors, $style) {  
+    @return map-get($colors, $style);  
+  }  
+  @error "Invalid color: '#{$style}'.";  
+}  
+.container {  
+  style: style-variation(white);  
+}

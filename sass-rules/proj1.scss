@@ -1,0 +1,94 @@
+@import 'reset';
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body{
+	font: 100% $font-stack;
+	color: $primary-color;
+}
+
+.container{
+	width: 100%;
+}
+
+
+aside{
+	float: right;
+	width: 300px / 960px * 100%;
+}
+
+article{
+	float: left;
+	width: 600px / 960px * 100%;
+}
+
+h3{
+	font-size: 15px + 2;
+	width: 10px * 5 + 200px;
+}
+
+@mixin font-fl($font){
+	&:after{
+		@if(type-of($font) == string){
+			content: 'My font is: #{$font}';
+		}
+		@else{
+			content: 'sorry, the argument #{$font} is a #{type-of($font)}';
+		}
+	}
+}
+
+h3{
+	@include font-fl(sans-serif);
+}
+
+$list: "red", "yellow", "lightblue";
+@mixin fg-color($property){
+	@each $item in $list{
+		$color-length: str-length($item);
+		@if($color-length %2 !=0){
+			#{$property}: unquote($item);
+		}
+	}
+}
+
+h3{
+	@include fg-color(color);
+}
+
+$padding: 50px;
+
+h3{
+	@if($padding <= 20px){
+		padding: $padding;
+	}
+	@else{
+		padding: $padding/2;
+	}
+}
+
+$list-map: (success: lightgreen, alert:red, info: lightblue,primary: blue,secondary: red, warning: orange);
+
+@mixin button-state($btn-state){
+	@if(length($list-map) > 2 and length($list-map) < 5){
+		background-color: map-get($list-map, $btn-state);
+	} 
+	@else{
+		background-color: bLack;
+	}
+}
+
+.btn{
+	@include button-state(success);
+}
+
+@mixin string-concat{
+	&:after{
+		content: " My favourite language is" + " " + Sass;
+		font-family: Arial + " sans-serif";
+	}
+}
+
+h2{
+	@include string-concat;
+}

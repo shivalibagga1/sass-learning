@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,EAAE;EACF,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,IAAI;EAEtB,MAAM;IACL,SAAS,EAAE,IAAI;IACf,UAAU,EAAE,IAAI;IAChB,KAAK,EAAE,MAAM",
+"sources": ["rule-root.scss"],
+"names": [],
+"file": "rule-root.css"
+}
